@@ -15,6 +15,8 @@ pip install exchangelib
 ### 使用情境
 假設信箱中有一封信進來，想要去把這封信格式化並存進資料庫
 <br>**以下圖為示意圖，敏感資料已經清除**
+
+
 ![](media/resume.jpg))
 
 
