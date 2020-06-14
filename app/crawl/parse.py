@@ -7,6 +7,10 @@ def parse_letters(_email,item):
     html_body = item.body #取出郵件內容
     sp = BeautifulSoup(html_body, 'lxml') #使用beautifulsoup解析文本
 
+    ######################################找信件中需要的內容################################
+    ###
+    #因為有些信件有不同的缺失值或是其他格式的內容，因此如不符合條件即用"無"代替
+    ###
     recruit = sp.title.text.split(' ')[0]
 
     try:
@@ -114,7 +118,9 @@ def parse_letters(_email,item):
 
     creation_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
+    ######################################找信件中需要的內容################################
 
+    #build payload
     _email.personal_data={
             'recruit':recruit,
             'find_job':find_job,
@@ -135,9 +141,11 @@ def parse_letters(_email,item):
             'creation_time':creation_time
         }
     print(_email.personal_data)
+    
+    '''接下來可把payload存到Database或做其他動作'''
 
 
-
+#取得信件夾中的信件後，用迴圈取值
 def get_letters(recruit):
     _email = Email()
     letters = _email.check_letter_len(recruit)

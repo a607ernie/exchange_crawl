@@ -1,4 +1,6 @@
 from app import *
+
+#define Email object
 class Email():
     def __init__(self):
         self.personal_data={
@@ -26,6 +28,7 @@ class Email():
 
         self.account = self.login()
 
+    #login exchange
     def login(self):
         self.account = ''
         try:
@@ -49,6 +52,7 @@ class Email():
             print("mail connect fail...")
         return self.account
 
+    #在指定收件夾搜尋符合條件(recruit)的信件
     def check_letter_len(self,recruit):
         #connect mailbox
         _indox=self.account.inbox / 'Archive'
