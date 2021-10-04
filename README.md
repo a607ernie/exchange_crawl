@@ -13,30 +13,16 @@ pip install exchangelib
 ```
 
 ### 使用情境
-假設信箱中有一封信進來，想要去把這封信格式化並存進資料庫
-<br>**以下圖為示意圖，敏感資料已經清除**
+假設信箱中有一封信進來，把需要的資料欄位進行格式化並存進資料庫，以供後續之處理與分析
 
-
-![](media/resume.jpg))
 
 
 ### 資料格式
 ```python
 personal_data={
-        'recruit':'',
-        'find_job':'',
         'name':'',
         'age':'',
         'gender':'',
-        'highest_education' : '' ,
-        'want_job_name' :'' ,
-        'work_experience' : '',
-        'recent_work' : '',
-        'address' : '',
-        'email' : '',
-        'cellphone' : '',
-        'contact_method' : '',
-        'resume_file':'',
         'Time':'',
         'ID':'',
         'creation_time':''
